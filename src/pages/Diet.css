@@ -1,0 +1,362 @@
+.diet-page {
+  padding-bottom: 20px;
+}
+
+/* Nutrition Summary */
+.nutrition-summary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.nutrition-card {
+  background: var(--surface);
+  border-radius: 16px;
+  padding: 16px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.nutrition-card .icon {
+  padding: 8px;
+  border-radius: 10px;
+}
+
+.nutrition-card .icon.orange {
+  background: rgba(245, 158, 11, 0.2);
+  color: var(--accent);
+}
+
+.nutrition-card .icon.blue {
+  background: rgba(99, 102, 241, 0.2);
+  color: var(--secondary);
+}
+
+.nutrition-card .icon.green {
+  background: rgba(16, 185, 129, 0.2);
+  color: var(--primary);
+}
+
+.nutrition-card .value {
+  font-size: 18px;
+  font-weight: 700;
+  display: block;
+}
+
+.nutrition-card .label {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+/* Diet Tabs */
+.diet-tabs {
+  display: flex;
+  background: var(--surface);
+  border-radius: 12px;
+  padding: 4px;
+  margin-bottom: 20px;
+}
+
+.diet-tabs .tab {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.diet-tabs .tab.active {
+  background: var(--primary);
+  color: white;
+}
+
+/* Meals List */
+.meals-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.meal-card {
+  background: var(--surface);
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+}
+
+.meal-card:hover {
+  border-color: rgba(16, 185, 129, 0.3);
+}
+
+.meal-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  cursor: pointer;
+}
+
+.meal-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  flex-shrink: 0;
+}
+
+.meal-main-info {
+  flex: 1;
+}
+
+.meal-type {
+  font-size: 11px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.meal-name {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 4px 0 2px;
+}
+
+.meal-name-np {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.meal-quick-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  color: var(--text-muted);
+}
+
+.meal-time-badge {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  background: var(--surface-light);
+  padding: 4px 8px;
+  border-radius: 8px;
+}
+
+/* Meal Details */
+.meal-details {
+  padding: 0 16px 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  animation: fadeIn 0.3s ease;
+}
+
+.meal-description {
+  color: var(--text-muted);
+  font-size: 13px;
+  margin: 16px 0;
+  line-height: 1.5;
+}
+
+.meal-stats {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.meal-stats .stat {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--text-muted);
+  background: var(--surface-light);
+  padding: 8px 12px;
+  border-radius: 10px;
+}
+
+.meal-items {
+  margin-bottom: 16px;
+}
+
+.meal-items h4,
+.meal-benefits h4 {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--text);
+}
+
+.meal-items ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.meal-items li {
+  font-size: 12px;
+  background: var(--surface-light);
+  padding: 6px 12px;
+  border-radius: 8px;
+  color: var(--text-muted);
+}
+
+.benefit-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.benefit-tag {
+  font-size: 11px;
+  background: rgba(16, 185, 129, 0.15);
+  color: var(--primary);
+  padding: 6px 12px;
+  border-radius: 20px;
+}
+
+.shuffle-btn {
+  width: 100%;
+  padding: 12px;
+  border: 1px dashed rgba(255, 255, 255, 0.2);
+  background: transparent;
+  color: var(--text-muted);
+  border-radius: 12px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 16px;
+  transition: all 0.3s ease;
+}
+
+.shuffle-btn:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  background: rgba(16, 185, 129, 0.1);
+}
+
+/* All Meals Tab */
+.all-meals {
+  margin-bottom: 24px;
+}
+
+.meal-category {
+  margin-bottom: 24px;
+}
+
+.category-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.category-meals {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.mini-meal-card {
+  background: var(--surface);
+  border-radius: 16px;
+  padding: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.mini-meal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.mini-meal-header h4 {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.meal-price {
+  font-size: 12px;
+  color: var(--primary);
+  background: rgba(16, 185, 129, 0.1);
+  padding: 4px 8px;
+  border-radius: 8px;
+}
+
+.mini-meal-desc {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+}
+
+.mini-meal-stats {
+  display: flex;
+  gap: 12px;
+}
+
+.mini-meal-stats span {
+  font-size: 11px;
+  color: var(--text-muted);
+  background: var(--surface-light);
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+/* Tips Section */
+.tips-section {
+  background: var(--surface);
+  border-radius: 20px;
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.tips-section h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.tip-card {
+  background: var(--surface-light);
+  border-radius: 12px;
+  padding: 12px 16px;
+  margin-bottom: 10px;
+}
+
+.tip-card:last-child {
+  margin-bottom: 0;
+}
+
+.tip-card p {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.tip-card strong {
+  color: var(--primary);
+}

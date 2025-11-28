@@ -1,0 +1,281 @@
+.progress-page {
+  padding-bottom: 20px;
+}
+
+/* Stats Overview */
+.stats-overview {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.stat-item {
+  background: var(--surface);
+  border-radius: 16px;
+  padding: 16px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.stat-icon-wrap {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stat-icon-wrap.green {
+  background: rgba(16, 185, 129, 0.2);
+  color: var(--primary);
+}
+
+.stat-icon-wrap.blue {
+  background: rgba(99, 102, 241, 0.2);
+  color: var(--secondary);
+}
+
+.stat-icon-wrap.orange {
+  background: rgba(245, 158, 11, 0.2);
+  color: var(--accent);
+}
+
+.stat-details {
+  text-align: center;
+}
+
+.stat-details .stat-value {
+  display: block;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.stat-details .stat-label {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+/* Chart Cards */
+.chart-card {
+  background: var(--surface);
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.chart-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.chart-header h3 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.chart-badge {
+  font-size: 12px;
+  background: rgba(16, 185, 129, 0.2);
+  color: var(--primary);
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+
+.chart-subtitle {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.text-primary {
+  color: var(--primary);
+}
+
+/* Today's Progress */
+.today-progress-container {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.doughnut-container {
+  width: 120px;
+  height: 120px;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.doughnut-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.doughnut-value {
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.doughnut-label {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.today-quests-list {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.today-quest-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  background: var(--surface-light);
+  border-radius: 10px;
+  font-size: 13px;
+}
+
+.today-quest-item.done {
+  background: rgba(16, 185, 129, 0.1);
+}
+
+.today-quest-item .quest-emoji {
+  font-size: 16px;
+}
+
+.today-quest-item .quest-name {
+  flex: 1;
+}
+
+.today-quest-item .check {
+  width: 18px;
+  height: 18px;
+  background: var(--success);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  color: white;
+}
+
+/* Line Chart */
+.line-chart-container {
+  height: 200px;
+}
+
+/* Bar Chart */
+.bar-chart-container {
+  height: 180px;
+}
+
+/* Progression List */
+.progression-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.progression-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.prog-icon {
+  font-size: 24px;
+  width: 40px;
+  text-align: center;
+}
+
+.prog-info {
+  flex: 1;
+}
+
+.prog-name {
+  font-size: 13px;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.prog-bar {
+  height: 8px;
+  background: var(--surface-light);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.prog-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.5s ease;
+}
+
+.prog-values {
+  text-align: right;
+  min-width: 70px;
+}
+
+.prog-current {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.prog-increase {
+  font-size: 11px;
+  color: var(--success);
+}
+
+/* Achievements */
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.achievement {
+  background: var(--surface-light);
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  opacity: 0.4;
+  filter: grayscale(1);
+  transition: all 0.3s ease;
+}
+
+.achievement.unlocked {
+  opacity: 1;
+  filter: grayscale(0);
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.2) 0%, rgba(99, 102, 241, 0.2) 100%);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.achievement.unlocked svg {
+  color: var(--accent);
+}
+
+.achievement span {
+  font-size: 12px;
+  font-weight: 500;
+  text-align: center;
+}
